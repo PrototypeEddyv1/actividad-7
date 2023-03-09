@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string("Nombre");
+            $table->string("Email");
+            $table->string("Password");
             $table->String("Grupos")->nullable();
-            $table->integer("Rol")->nullable();
+            $table->String("Rol");
             $table->timestamps();
         });
     }
